@@ -7,7 +7,10 @@ class LRU:
     """Algoritmo Least Recently Used (LRU) para substituicao de paginas na memoria RAM"""
 
     def execute(self, qtd_quadros, referencias):
-        """Executa o algoritmo de substituicao de paginas LRU"""
+        """
+        Executa o algoritmo de substituicao de paginas LRU. Recebe como
+        parametros a quantidade de quadros e a lista de paginas referenciadas.
+        """
         # Inicializa os valores de miss
         miss = 0 # Quando a pagina referenciada nao esta na memoria
 
@@ -32,7 +35,10 @@ class LRU:
 
 
     def __pagina_mais_antiga(self, quadros):
-        """Procura a pagina referencia a mais tempo na memoria RAM"""
+        """
+        Procura a pagina referencia a mais tempo na memoria RAM. Recebe como
+        parametros os quadros da memoria.
+        """
 
         # Considera inicialmente a primeira a mais antiga
         mais_antiga = quadros.keys()[0]

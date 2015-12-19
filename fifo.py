@@ -5,7 +5,10 @@ class FIFO:
     """Algoritmo First-in First-out (FIFO) para substituicao de paginas na memoria RAM"""
 
     def execute(self, qtd_quadros, referencias):
-        """Executa o algoritmo de substituicao de paginas FIFO"""
+        """
+        Executa o algoritmo de substituicao de paginas FIFO. Recebe como
+        parametros a quantidade de quadros e a lista de paginas referenciadas.
+        """
         # Inicializa os valores de miss
         miss = 0 # Quando a pagina referenciada nao esta na memoria
 
