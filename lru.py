@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import time
-
 class LRU:
     """Algoritmo Least Recently Used (LRU) para substituicao de paginas na memoria RAM"""
 
@@ -13,6 +11,9 @@ class LRU:
         """
         # Inicializa os valores de miss
         miss = 0 # Quando a pagina referenciada nao esta na memoria
+
+        # Configura o instante inicial como zero
+        instante = 0
 
         # Quadros da memoria
         quadros = {} # As chaves sao as paginas e os valores o instante que entrou na memoria
@@ -25,10 +26,11 @@ class LRU:
                 # Se todos os quadros estiverem ocupados remove a pagina usada a mais tempo
                 if len(quadros) == qtd_quadros:
                     mais_antiga = self.__pagina_mais_antiga(quadros)
-                    del quadros[mais_antiga]
+                    del quadros[mais_antiga] # Retira a pagina da memoria RAM
 
             # Adiciona a pagina na memoria RAM ou atualiza o instante de utilizacao
-            quadros[ref] = time.time()
+            quadros[ref] = instante
+            instante += 1
 
         # Retorna o numero de paginas nao encontradas na memoria RAM
         return miss
