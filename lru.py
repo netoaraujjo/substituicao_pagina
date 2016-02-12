@@ -38,7 +38,7 @@ class LRU:
 
     def __pagina_mais_antiga(self, quadros):
         """
-        Procura a pagina referencia a mais tempo na memoria RAM. Recebe como
+        Procura a pagina referenciada a mais tempo na memoria RAM. Recebe como
         parametros os quadros da memoria.
         """
 
